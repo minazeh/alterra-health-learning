@@ -1,0 +1,26 @@
+{
+  "name": "alterra-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:css/style.css",
+    "build-css": "sass scss/style.scss css/style.css --style=compressed",
+    "postcss": "postcss css/style.css --use autoprefixer -o css/style.css",
+    "build": "npm run build-css && npm run postcss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.20",
+    "bootstrap": "^5.3.3",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.79.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0"
+  }
+}
