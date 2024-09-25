@@ -44,6 +44,13 @@ defined( 'ABSPATH' ) || exit();
 			<?php do_action( 'learn-press/after-form-register-fields' ); ?>
 		</ul>
 
+		<p class="form-row">
+			<label for="terms_conditions">
+				<input type="checkbox" id="terms_conditions" name="terms_conditions" value="1" required>
+				I agree to the <a href="/terms-and-conditions" class="terms-conditions" target="_blank">Terms and Conditions</a>
+			</label>
+		</p>
+
 		<?php do_action( 'register_form' ); ?>
 
 		<p>

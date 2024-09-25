@@ -12440,6 +12440,10 @@ button[type=button]:disabled {
   filter: drop-shadow(1px 0 6px rgba(0, 0, 0, 0.3));
 }
 
+.terms-conditions {
+  color: var(--primary-color);
+}
+
 @media (max-width: 1368px) {
   .container {
     max-width: 1120px;

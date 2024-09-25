@@ -593,4 +593,13 @@ function execute_for_demo_role() {
 }
 add_action('wp_head', 'execute_for_demo_role');
 
+add_action( 'learn_press_before_user_register', 'validate_terms_conditions' );
+
+function validate_terms_conditions() {
+    if ( ! isset( $_POST['terms_conditions'] ) || $_POST['terms_conditions'] != '1' ) {
+        learn_press_add_message( __( 'You must agree to the Terms and Conditions to register.', 'learnpress' ), 'error' );
+        return false;
+    }
+}
+
 ?>
