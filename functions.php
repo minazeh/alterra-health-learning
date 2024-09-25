@@ -602,4 +602,17 @@ function validate_terms_conditions() {
     }
 }
 
+// Function to get permalink by slug
+function get_permalink_by_slug($slug) {
+    // Get the post by slug
+    $post = get_page_by_path($slug);
+    
+    // If post exists, return the permalink
+    if ($post) {
+        return get_permalink($post->ID);
+    }
+    
+    return false; // Return false if no post found
+}
+
 ?>

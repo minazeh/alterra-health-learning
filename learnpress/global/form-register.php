@@ -47,7 +47,7 @@ defined( 'ABSPATH' ) || exit();
 		<p class="form-row">
 			<label for="terms_conditions">
 				<input type="checkbox" id="terms_conditions" name="terms_conditions" value="1" required>
-				I agree to the <a href="/terms-and-conditions" class="terms-conditions" target="_blank">Terms and Conditions</a>
+				I agree to the <a href="<?php echo get_permalink_by_slug('terms-and-conditions'); ?>" class="terms-conditions" target="_blank">Terms and Conditions</a>
 			</label>
 		</p>
 
