@@ -9,22 +9,32 @@
 
 <body <?php body_class("d-flex flex-column min-vh-100"); ?>>
 
-    <header class="site-header navbar navbar-expand-lg mb-n5">
-        <div class="container d-flex justify-content-between py-2">
-            <!-- Logo Section -->
-            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                <?php if (has_custom_logo()) {
-                    the_custom_logo();
-                } else {
-                    echo bloginfo('name');
-                } ?>
-            </a>
-            <!-- Menu Button -->
-            <a class="btn menubtn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                MENU
-            </a>   
+<header class="site-header navbar navbar-expand-lg mb-n5">
+    <div class="container">
+        <div class="row w-100 align-items-center">
+            <!-- Empty space for alignment on the left -->
+            <div class="col-4 hidden-small"></div>
+
+            <!-- Centered Logo Section -->
+            <div class="col-md-4 col-8 text-md-center mt-2 mb-3">
+                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php if (has_custom_logo()) {
+                        the_custom_logo();
+                    } else {
+                        echo bloginfo('name');
+                    } ?>
+                </a>
+            </div>
+
+            <!-- Right Aligned Menu Button -->
+            <div class="col-4 text-end">
+                <a class="btn menubtn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    MENU
+                </a>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
     
     <div class="offcanvas offcanvas-end px-1" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">

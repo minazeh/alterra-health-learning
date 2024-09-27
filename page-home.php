@@ -5,6 +5,33 @@ Template Name: Home Page
 get_header(); 
 ?>
 
+<section class="video-section">
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-12">
+                <!-- Video Background -->
+                <div class="video-container">
+                    <video autoplay muted loop id="background-video" class="w-100">
+                        <source src="<?php the_field('hero_video'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Content Overlay -->
+                <div class="content-overlay text-center">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 col-sm-10 mx-auto">
+                            <h1><?php the_field('hero_headline'); ?></h1>
+                            <a href="<?php the_field('hero_button_url'); ?>" class="btn btn-outline-light"><?php the_field('hero_button_text'); ?> <i class="fas fa-arrow-right btn-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="d-flex my-5">
     <div class="container py-4 section-type-1">
         <div class="row d-flex align-items-center">

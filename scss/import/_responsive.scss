@@ -1,79 +1,101 @@
 @media (max-width: 1368px) {
-    
-    .container{
-        max-width: 1120px;
-    }
+	.container {
+		max-width: 1120px;
+	}
 
-    section{
-        padding-right: 20px;
-        padding-left: 20px;
-    }
+	section {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
 
-    .specific-card{
+	.specific-card {
+		.card-body {
+			min-height: 95px;
 
-        .card-body{
-            min-height: 95px;
+			p {
+				line-height: 1.5rem;
+			}
+		}
 
-            p{
-                line-height: 1.5rem;
-            }
-        }
+		.card-icons {
+			margin-right: 15px;
+		}
+	}
 
-        .card-icons{
-            margin-right:15px;
-        }
-    }
+	.videocontainer {
+		margin-bottom: 0px !important;
+		padding-bottom: 0px !important;
+	}
 
-    .videocontainer{
-        margin-bottom: 0px !important;
-        padding-bottom: 0px !important;
-    }
+	.videosection {
+		margin-bottom: 4rem;
+	}
+}
 
-    .videosection{
-        margin-bottom: 4rem;
-    }
+@media (max-width: 1199px) {
+	.video-section {
+		padding: 0px 0px 0px 0px;
+	}
+}
+
+@media (max-width: 1119px) {
+	#background-video {
+		border-radius: 0px;
+	}
 }
 
 @media (max-width: 991px) {
-    
-    .hero-card{
-        margin-bottom: 2rem;
-    }
+	.hero-card {
+		margin-bottom: 2rem;
+	}
 
-    .col-12{
-        .btn-primary{
-            margin-top: 2rem;
-        }
-    }
+	.col-12 {
+		.btn-primary {
+			margin-top: 2rem;
+		}
+	}
 
-    .col-lg-5{
-        .btn-primary{
-            margin-bottom: 2rem;
-        }
-    }
+	.col-lg-5 {
+		.btn-primary {
+			margin-bottom: 2rem;
+		}
+	}
 }
 
 @media (max-width: 767px) {
+	.clearbtn {
+		margin-top: 10px !important;
+	}
 
-    .clearbtn{
-        margin-top: 10px !important;
-    }
+	.hidden-small {
+		display: none;
+	}
 
-    .navbar-brand{
-        margin-right: 0px;
-    }
+	.navbar-brand {
+		margin-right: 0px;
+	}
 
-    .menubtn{
-        margin-top: 5px;
-    }
-    
-    section{
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+	.menubtn {
+		margin-top: 0px;
+		margin-right: -30px !important;
+	}
 
-    .footer-text{
-        font-size: 0.875rem;
-    }
+	section {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
 
+	.footer-text {
+		font-size: 0.875rem;
+	}
+
+	.video-section .container {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		min-height: 400px;
+	}
 }
