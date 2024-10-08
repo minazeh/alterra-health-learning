@@ -615,4 +615,24 @@ function get_permalink_by_slug($slug) {
     return false; // Return false if no post found
 }
 
+function restrict_access_to_logged_out_users() {
+    // Get the current page ID or slug
+    $current_page = get_queried_object();
+
+    // Define your login and registration page slugs (or IDs)
+    $login_page_slug = 'login'; // Adjust this to match your actual login page slug
+    $register_page_slug = 'register'; // Adjust this to match your actual registration page slug
+
+    // Check if user is logged out
+    if ( !is_user_logged_in() ) {
+        // If the current page is not the login or register page, redirect to login
+        if ( $current_page->post_name !== $login_page_slug && $current_page->post_name !== $register_page_slug ) {
+            wp_redirect( home_url( '/login' ) );
+            exit();
+        }
+    }
+}
+// Hook into WordPress
+add_action( 'template_redirect', 'restrict_access_to_logged_out_users' );
+
 ?>

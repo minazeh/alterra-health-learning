@@ -12485,6 +12485,10 @@ h1, .h1 {
   padding: 10px 20px;
 }
 
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
 @media (max-width: 1368px) {
   .container {
     max-width: 1120px;
