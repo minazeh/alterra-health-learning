@@ -63,7 +63,7 @@ get_header();
                     <img src="<?php the_field('box_image_three'); ?>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title var-color"><?php the_field('box_text_three'); ?></h5>
-                        <a class="btn btn-trans-white" href="<?php the_field('cta_three'); ?>">Get started  <i class="fas fa-arrow-right btn-arrow"></i>
+                        <a class="btn btn-trans-white" href="javascript:void(0);">Get started  <i class="fas fa-arrow-right btn-arrow"></i>
                         </a>
                     </div>
                 </div>
