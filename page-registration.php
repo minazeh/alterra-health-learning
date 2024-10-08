@@ -81,6 +81,10 @@ if ( isset( $_POST['register'] ) ) {
                     <div class="card">
                         <div class="card-body py-5 px-md-5">
                             <h2 class="mb-3">Sign Up</h2>
+                            <script type="text/javascript">
+                                jQuery("#wp-login-google-login-button").appendTo("#loginform");
+                            </script>
+                            
                             <form id="registrationForm" method="post">
                                 <div class="form-floating mb-4">
                                     <input type="text" name="first_name" id="first_name" class="form-control" required />
@@ -113,6 +117,20 @@ if ( isset( $_POST['register'] ) ) {
                                     <p>Already have an account? <a href="<?php echo esc_url(home_url('/login')); ?>" class="text-primary link-primary" style="text-decoration: none;">Log In</a></p>
                                 </div>
                             </form>
+
+                            <div id="wp-login-google-login-button" style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+                                <div style="margin: 10px 0;">Or</div>
+                                <div class="g_id_signin"
+                                    data-type="standard"
+                                    data-theme="filled_black"
+                                    data-size="large"
+                                    data-text="continue_with"
+                                    data-shape="pill"
+                                    data-locale="en_US"
+                                    data-use_fedcm_for_prompt="true">
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
