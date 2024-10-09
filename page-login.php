@@ -49,10 +49,10 @@ if ( isset( $_POST['login'] ) ) {
                             } ?>
                         </a>
                     </div>
-                    <h1 class="my-5 display-3 fw-bold ls-tight">
+                    <h1 class="my-5 display-5 fw-bold ls-tight">
                         <?php the_field('login_header'); ?>
                     </h1>
-                    <p>
+                    <p style="font-size: 1.4rem;">
                         <?php the_field('login_text'); ?>
                     </p>
                 </div>

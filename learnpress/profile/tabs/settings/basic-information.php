@@ -55,7 +55,7 @@ $user = $profile->get_user();
 		</li>
 
 		<li class="form-field form-field__bio form-field__clear">
-			<label for="description"><?php esc_html_e( 'Biographical Info', 'learnpress' ); ?></label>
+			<label for="description"><?php esc_html_e( 'Your Bio', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<?php
 				echo sprintf(
@@ -65,7 +65,7 @@ $user = $profile->get_user();
 					'</textarea>'
 				);
 				?>
-				<p class="description"><?php esc_html_e( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'learnpress' ); ?></p>
+				<p class="description"><?php esc_html_e( 'Share a little information to complete your profile. This may be shown publicly.', 'learnpress' ); ?></p>
 			</div>
 		</li>
 

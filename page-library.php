@@ -9,7 +9,7 @@ get_header();
     
     <div class="row">
         <div class="col-12 p-4 section-type-1">
-            <h1>Content Library</h1>
+            <h1>Content library</h1>
             <div class="lead"><?php the_field('library_header_text'); ?> </div>
             <div class="mb-3"></div>
             <div class="">

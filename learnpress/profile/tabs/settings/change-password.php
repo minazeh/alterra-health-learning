@@ -27,19 +27,19 @@ if ( ! isset( $section ) ) {
 		<?php do_action( 'learn-press/begin-profile-change-password-fields', $profile ); ?>
 
 		<li class="form-field">
-			<label for="pass0"><?php esc_html_e( 'Current password', 'learnpress' ); ?></label>
+			<label for="pass0"><?php esc_html_e( 'Current password*', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<input type="password" id="pass0" name="pass0" autocomplete="off" class="regular-text"/>
 			</div>
 		</li>
 		<li class="form-field">
-			<label for="pass1"><?php esc_html_e( 'New password', 'learnpress' ); ?></label>
+			<label for="pass1"><?php esc_html_e( 'New password*', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<input type="password" name="pass1" id="pass1" class="regular-text" value=""/>
 			</div>
 		</li>
 		<li class="form-field">
-			<label for="pass2"><?php esc_html_e( 'Confirm new password', 'learnpress' ); ?></label>
+			<label for="pass2"><?php esc_html_e( 'Confirm new password*', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<input name="pass2" type="password" id="pass2" class="regular-text" value=""/>
 				<p id="lp-password-not-match" class="description lp-field-error-message hide-if-js"><?php esc_html_e( 'The new password does not match!', 'learnpress' ); ?></p>

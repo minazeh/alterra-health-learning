@@ -29,7 +29,7 @@ if ( empty( $statistic ) || empty( $user ) ) {
 		</div>
 		<div class="statistic-box"
 			title="<?php esc_html_e( 'The total number of courses is being learned', 'learnpress' ); ?>">
-			<p class="statistic-box__text"><?php esc_html_e( 'Active Courses', 'learnpress' ); ?></p>
+			<p class="statistic-box__text">In Progress Course </p>
 			<span class="statistic-box__number"><?php echo esc_html( $statistic['active_courses'] ); ?></span>
 		</div>
 		<div class="statistic-box" title="<?php esc_html_e( 'Total courses have finished', 'learnpress' ); ?>">

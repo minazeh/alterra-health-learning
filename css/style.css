@@ -12489,6 +12489,10 @@ h1, .h1 {
   color: var(--primary-color) !important;
 }
 
+.learn-press-breadcrumb {
+  display: none !important;
+}
+
 @media (max-width: 1368px) {
   .container {
     max-width: 1120px;
