@@ -100,26 +100,7 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('openLoginModal').addEventListener('click', function() {
-            // Check if the off-canvas is open
-            var offcanvasElement = document.querySelector('.offcanvas.show');
-            var modalElement = new bootstrap.Modal(document.getElementById('loginModal'));
-
-            if (offcanvasElement) {
-                // Close off-canvas first, then open the modal after it's hidden
-                var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
-                offcanvasInstance.hide();
-
-                // Ensure the modal opens after the off-canvas is fully hidden
-                offcanvasElement.addEventListener('hidden.bs.offcanvas', function() {
-                    modalElement.show();
-                }, { once: true });
-            } else {
-                // If off-canvas is not open, just open the modal
-                modalElement.show();
-            }
-        });
+ 
 
 
     </script>

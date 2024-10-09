@@ -579,16 +579,22 @@ add_action('init', 'create_demo_role');
 
 
 function execute_for_demo_role() {
-    if (is_user_logged_in() && current_user_can('demo')) {
-        echo '
-        <style>
-            #section-12, #section-13, #section-14, #section-15, 
-            #section-16, #section-17, #section-18, #section-19, 
-            #section-20, #section-21 {
-                display: none;
-            }
-        </style>
-        ';
+    if (is_user_logged_in() && is_multisite()) {
+        $user = wp_get_current_user();
+        $user_roles = (array) $user->roles;
+        
+        // Ensure the user has only the 'demo' role
+        if (count($user_roles) === 1 && in_array('demo', $user_roles)) {
+            echo '
+            <style>
+                #section-16, #section-17, #section-18, #section-19, 
+                #section-20, #section-21, #section-22, #section-23, 
+                #section-24, #section-25 {
+                    display: none;
+                }
+            </style>
+            ';
+        }
     }
 }
 add_action('wp_head', 'execute_for_demo_role');
