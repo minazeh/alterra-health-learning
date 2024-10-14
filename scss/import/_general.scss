@@ -716,3 +716,44 @@ h1 {
 .learn-press-breadcrumb {
 	display: none !important;
 }
+
+.terms-agreement {
+	a {
+		color: $primary-color;
+		border-bottom: 1px solid $primary-color;
+		text-decoration: none;
+
+		&:hover {
+			color: $primary-hover-color;
+		}
+	}
+}
+
+.privacy-terms {
+	background-color: #111111;
+	padding: 10px;
+
+	ul {
+		display: inline;
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+			display: inline-block;
+
+			a {
+				font-size: 0.8rem;
+				text-decoration: none;
+			}
+
+			&:first-child {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+.g-recaptcha {
+	display: none;
+}

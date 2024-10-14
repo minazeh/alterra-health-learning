@@ -52,6 +52,7 @@
                         </li>
                         <?php endif; ?>
                     </ul>
+
                 </div>
 
                 <div class="col-xl-6 col-12 order-xl-2 order-1 mb-4">
@@ -63,14 +64,24 @@
                     <div class="small footer-text-small">*Individual results may vary. Not a medical provider.</div>
                 </div>
 
-                <div class="col-xl-3 col-12 order-xl-3 order-3 mb-4">
+                <div class="col-xl-3 col-12 text-left text-start order-xl-3 order-3 mb-4">
                     <a target="_blank" href="<?php echo $support; ?>" class="btn text-white" style="background-color: #0D0D0D;">Join our support community  <i class="fas fa-arrow-right btn-arrow"></i></a>
+                    
                 </div>
             </div>
+            
         </div>
     </footer>
-
-
+    <div class="privacy-terms text-white text-center">
+        <ul>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/privacy-policy" class="text-white d-block">Privacy Policy</a>
+            </li>
+            <li class="">
+                <a href="<?php echo get_site_url(); ?>/terms-and-conditions" class="text-white d-block">Terms and Conditions</a>
+            </li>
+        </ul>
+    </div>
 
     <?php wp_footer(); ?>
 </body>

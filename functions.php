@@ -622,17 +622,20 @@ function get_permalink_by_slug($slug) {
 }
 
 function restrict_access_to_logged_out_users() {
-    // Get the current page ID or slug
+    // Get the current page object
     $current_page = get_queried_object();
 
-    // Define your login and registration page slugs (or IDs)
+    // Define your login, registration, and terms page slugs (or IDs)
     $login_page_slug = 'login'; // Adjust this to match your actual login page slug
     $register_page_slug = 'register'; // Adjust this to match your actual registration page slug
+    $terms_page_slug = 'terms-and-conditions'; // Adjust this to match your actual terms page slug
 
     // Check if user is logged out
     if ( !is_user_logged_in() ) {
-        // If the current page is not the login or register page, redirect to login
-        if ( $current_page->post_name !== $login_page_slug && $current_page->post_name !== $register_page_slug ) {
+        // If the current page is not the login, register, or terms page, redirect to login
+        if ( $current_page->post_name !== $login_page_slug && 
+            $current_page->post_name !== $register_page_slug && 
+            $current_page->post_name !== $terms_page_slug ) {
             wp_redirect( home_url( '/login' ) );
             exit();
         }
@@ -640,5 +643,21 @@ function restrict_access_to_logged_out_users() {
 }
 // Hook into WordPress
 add_action( 'template_redirect', 'restrict_access_to_logged_out_users' );
+
+function save_learnpress_phone_number( $profile ) {
+    if ( isset( $_POST['phone_number'] ) ) {
+        $user_id = $profile->get_user_id();
+        $phone_number = sanitize_text_field( $_POST['phone_number'] );
+        update_user_meta( $user_id, 'phone_number', $phone_number );
+    }
+}
+add_action( 'learn-press/update-profile-basic-information', 'save_learnpress_phone_number' );
+
+// reCaptcha
+
+function add_recaptcha_script() {
+    echo '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
+}
+add_action('wp_head', 'add_recaptcha_script');
 
 ?>

@@ -6,87 +6,93 @@
 @import 'import/general';
 @import 'import/responsive';
 
-//Overrider 
-.btn{
-    padding: 10px 15px;
-    font-weight: 600;
-    display: inline-flex; /* Use inline-flex instead of flex to avoid 100% width */
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
-    white-space: nowrap; /* Prevents text from wrapping */
-   
+//Overrider
+.btn {
+	padding: 10px 15px;
+	font-weight: 600;
+	display: inline-flex; /* Use inline-flex instead of flex to avoid 100% width */
+	align-items: center; /* Vertically centers the content */
+	justify-content: center; /* Horizontally centers the content */
+	white-space: nowrap; /* Prevents text from wrapping */
 }
 
-.btn-arrow{
-    max-width: 15px;
-    margin-left: 10px;
+.btn-arrow {
+	max-width: 15px;
+	margin-left: 10px;
 }
 
 .btn-trans-white {
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-    font-weight: 700;
-    color: $primary-color; /* Ensure text color stays solid */
-    
-    &:hover {
-        background: rgba(255, 255, 255, 1); /* Fully opaque white on hover */
-    }
+	background: rgba(
+		255,
+		255,
+		255,
+		0.7
+	); /* Semi-transparent white background */
+	font-weight: 700;
+	color: $primary-color; /* Ensure text color stays solid */
+
+	&:hover {
+		background: rgba(255, 255, 255, 1); /* Fully opaque white on hover */
+	}
 }
 
 body {
-    font-family: 'Inter', sans-serif !important;
-    color: $default-color;
+	font-family: 'Inter', sans-serif !important;
+	color: $default-color;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-weight: 700 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700 !important;
 }
 
 h2 {
-    position: relative;
-    display: inline-block;
-
+	position: relative;
+	display: inline-block;
 }
 
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
+input[type='search'] {
+	display: block;
+	width: 100%;
+	padding: 0.375rem 0.75rem; // Bootstrap default padding for form-control
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057; // Bootstrap default text color
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da; // Bootstrap default border color
+	border-radius: 0.25rem; // Default border radius
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-input[type="search"] {
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem; // Bootstrap default padding for form-control
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057; // Bootstrap default text color
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da; // Bootstrap default border color
-    border-radius: 0.25rem; // Default border radius
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  
-    // Placeholder styling
-    &::placeholder {
-      color: #6c757d; // Bootstrap placeholder color
-      opacity: 1;
-    }
-  
-    // Focus state
-    &:focus {
-      color: #495057;
-      background-color: #fff;
-      border-color: #80bdff; // Bootstrap default focus border color
-      outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); // Focus shadow
-    }
-    
-    // Disabled state
-    &:disabled {
-      background-color: #e9ecef;
-      opacity: 1;
-    }
-  }
-  
+	// Placeholder styling
+	&::placeholder {
+		color: #6c757d; // Bootstrap placeholder color
+		opacity: 1;
+	}
+
+	// Focus state
+	&:focus {
+		color: #495057;
+		background-color: #fff;
+		border-color: #80bdff; // Bootstrap default focus border color
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); // Focus shadow
+	}
+
+	// Disabled state
+	&:disabled {
+		background-color: #e9ecef;
+		opacity: 1;
+	}
+}

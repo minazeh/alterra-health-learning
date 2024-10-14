@@ -11,5 +11,5 @@
 
 defined( 'ABSPATH' ) || exit();
 ?>
-
+<p>The recommended photo size is 250 x 250 pixels.<br>Acceptable file types include .jpg and .png images.</p>
 <div id="learnpress-avatar-upload"></div>

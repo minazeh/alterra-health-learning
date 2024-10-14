@@ -18,6 +18,8 @@ if ( ! isset( $section ) ) {
 }
 
 $user = $profile->get_user();
+$user_id = $user->get_id(); // Get the user ID
+$phone_number = get_user_meta( $user_id, 'phone_number', true ); // Get the phone number from user meta
 ?>
 
 <form method="post" id="learn-press-profile-basic-information" name="profile-basic-information" enctype="multipart/form-data" class="learn-press-form">
@@ -28,25 +30,29 @@ $user = $profile->get_user();
 
 		<?php do_action( 'learn-press/begin-profile-basic-information-fields', $profile ); ?>
 
+		
 
 		<li class="form-field form-field__first-name form-field__50">
-			<label for="first_name"><?php esc_html_e( 'First name', 'learnpress' ); ?></label>
+			<label for="first_name"><?php esc_html_e( 'First name*', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<input type="text" name="first_name" id="first_name" value="<?php echo esc_attr( $user->get_data( 'first_name' ) ); ?>" class="regular-text">
 			</div>
 		</li>
+
 		<li class="form-field form-field__last-name form-field__50">
-			<label for="last_name"><?php esc_html_e( 'Last name', 'learnpress' ); ?></label>
+			<label for="last_name"><?php esc_html_e( 'Last name*', 'learnpress' ); ?></label>
 			<div class="form-field-input">
 				<input type="text" name="last_name" id="last_name" value="<?php echo esc_attr( $user->get_data( 'last_name' ) ); ?>" class="regular-text">
 			</div>
 		</li>
+
 		<li class="form-field form-field__last-name form-field__50">
 			<label for="account_display_name"><?php esc_html_e( 'Display name', 'learnpress' ); ?><span class="required">*</span></label>
 			<div class="form-field-input">
 				<input type="text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->get_data( 'display_name' ) ); ?>" class="regular-text">
 			</div>
 		</li>
+
 		<li class="form-field form-field__last-name form-field__50">
 			<label for="account_email"><?php esc_html_e( 'Email address', 'learnpress' ); ?><span class="required">*</span></label>
 			<div class="form-field-input">
@@ -54,6 +60,15 @@ $user = $profile->get_user();
 			</div>
 		</li>
 
+		<!-- Phone Number Field -->
+		<li class="form-field form-field__phone-number form-field__50">
+			<label for="phone_number"><?php esc_html_e( 'Phone Number*', 'learnpress' ); ?></label>
+			<div class="form-field-input">
+				<input type="text" name="phone_number" id="phone_number" value="<?php echo esc_attr( $phone_number ); ?>" class="regular-text">
+			</div>
+		</li>
+
+		<!-- Bio Section -->
 		<li class="form-field form-field__bio form-field__clear">
 			<label for="description"><?php esc_html_e( 'Your Bio', 'learnpress' ); ?></label>
 			<div class="form-field-input">

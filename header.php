@@ -58,17 +58,17 @@
             <div class="d-flex w-100 mt-3">
                 <?php if ( is_user_logged_in() ) : ?>
                     <!-- Show Logout Button if Logged In -->
-                    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn btn-outline-secondary flex-grow-1">Logout</a>
+                    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="btn btn-outline-secondary flex-grow-1">Log out</a>
                 <?php else : ?>
                     <!-- Trigger Modal for Login Form -->
-                    <button  class="btn btn-outline-secondary me-2 flex-grow-1" id="openLoginModal">
+                    <a href="<?php echo esc_url(home_url('/login')); ?>" class="btn btn-outline-secondary me-2 flex-grow-1">
                         Login
-                    </button>
+                    </a>
 
                     <!-- Signup Button -->
-                    <button class="btn btn-outline-secondary flex-grow-1" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        Signup
-                    </button>
+                    <a href="<?php echo esc_url(home_url('/register')); ?>" class="btn btn-outline-secondary flex-grow-1">
+                        Sign up
+                    </a>
                 <?php endif; ?>
             </div>
 
