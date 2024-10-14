@@ -43,7 +43,7 @@ if ( isset( $_POST['register'] ) ) {
         } else {
 
             if ($_POST['g-recaptcha-response']) {
-                $secret = '6LdhIWEqAAAAAC9YJemjIpCwX0vLw9zfKSWvxKCE';
+                $secret = 'G_SECRET';
                 $response = $_POST['g-recaptcha-response'];
                 $remoteip = $_SERVER['REMOTE_ADDR'];
                 
